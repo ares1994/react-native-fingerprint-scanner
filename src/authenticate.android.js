@@ -8,7 +8,8 @@ import createError from './createError';
 const { ReactNativeFingerprintScanner } = NativeModules;
 
 const authCurrent = (title, subTitle, description, cancelButton, resolve, reject) => {
-  ReactNativeFingerprintScanner.authenticate(title, subTitle, description, cancelButton)
+  const custom = ""
+  ReactNativeFingerprintScanner.authenticate(title, subTitle, description, cancelButton, custom)
     .then(() => {
       resolve(true);
     })
